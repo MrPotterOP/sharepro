@@ -41,6 +41,7 @@ nav .nav-menu-container {
     width: 100%;
     padding: 2rem 0;
     transition: all 1s;
+    z-index: 99;
 }
 
 .nav-menu-container ul  {
@@ -66,6 +67,9 @@ nav .nav-menu-container {
     height: 4px;
     background-color: var(--color-second);
     cursor: pointer;
+}
+.nav-icon-container {
+    z-index: 9999;
 }
 
 nav #active {
