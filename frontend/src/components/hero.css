@@ -50,6 +50,7 @@
 
 @media (min-width: 43.75em){
     .section-hero {
+        height: 90vh;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr;
     }
