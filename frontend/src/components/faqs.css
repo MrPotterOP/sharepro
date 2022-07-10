@@ -34,7 +34,8 @@
     z-index: -11;
 }
 .faq-container ul li:nth-child(2){
-    background-color: gray;
+    background-color: #6600cc19;
+    color: black;
 }
 .faq-container ul li:first-child::after, .faq-container ul li:first-child::before{
     content: "";
