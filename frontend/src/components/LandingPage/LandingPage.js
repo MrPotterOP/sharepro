@@ -4,6 +4,7 @@ import React from "react";
 import Navbar from "../Navbar";
 import Hero from "../Hero";
 import WorkSection from "../WorkSection";
+import FAQs from "../FAQs";
 
 const LandingPage = ()=>{
     return(
@@ -11,6 +12,7 @@ const LandingPage = ()=>{
             <Navbar />
             <Hero />
             <WorkSection />
+            <FAQs />
         </section>
     )
 };
