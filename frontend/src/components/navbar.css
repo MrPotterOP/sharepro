@@ -21,7 +21,7 @@ header nav {
     box-shadow: 0 1px 7px 0px grey;
 }
 
-nav .logo-container .logo-text span{
+.logo-container .logo-text span{
     font-family: var(--font-beta);
     color: var(--color-first);
     font-weight: var(--font-weight-medium);

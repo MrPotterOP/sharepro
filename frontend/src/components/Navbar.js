@@ -40,7 +40,6 @@ const Navbar = ()=>{
 
                 <div className="nav-icon-container" onClick={()=> handleClick()}>
                     <i className={isActive ? "gg-close nav-menu-icon" : "gg-menu nav-menu-icon"}></i>
-                    {/* <i className="gg-close nav-close-icon"></i> */}
                 </div>
             </nav>
         </header>
