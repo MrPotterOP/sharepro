@@ -1,6 +1,7 @@
 import express from "express";
 import dotenv from "dotenv";
 import mongoose from "mongoose";
+import router from "./routes/routes.js";
 
 dotenv.config();
 
@@ -15,6 +16,7 @@ mongoose.connect(process.env.MONGOURL, {useNewUrlParser: true, useUnifiedTopolog
 const App = express();
 
 App.use(express.json());
+App.use("/api/", router);
 
 
 App.listen(process.env.PORT || 4000, (req, res)=>{
