@@ -15,7 +15,7 @@ const FAQs = ()=>{
     };
 
     return(
-        <section className="section-faqs">
+        <section className="section-faqs" id="faqs">
             <div className="work-brief-title-container faqs-title-container">
                 <h2>FAQ's</h2>
             </div>

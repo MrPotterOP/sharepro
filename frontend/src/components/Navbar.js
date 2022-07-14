@@ -1,5 +1,5 @@
 import React,{useState} from "react";
-import {Link} from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 import "./navbar.css";
 
 
@@ -31,10 +31,10 @@ const Navbar = ()=>{
 
                 <div className="nav-menu-container" id={isActive ? "active" : "inactive"}>
                     <ul>
-                        <li><Link to="#">Home</Link></li>
-                        <li><Link to="#">How It Works</Link></li>
-                        <li><Link to="#">FAQs</Link></li>
-                        <li><Link to="#">Getting Started</Link></li>
+                        <li><HashLink to="/">Home</HashLink></li>
+                        <li><HashLink to="/#how-it-works">How It Works</HashLink></li>
+                        <li><HashLink to="/#faqs">FAQs</HashLink></li>
+                        <li><HashLink to="/platform">Getting Started</HashLink></li>
                     </ul>
                 </div>
 

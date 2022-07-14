@@ -50,7 +50,6 @@ nav .nav-menu-container {
 
 .nav-menu-container ul li {
     padding: .6rem 0;
-    border-bottom: 0 solid blue;
 }
 .nav-menu-container ul li::after {
     content: "";
