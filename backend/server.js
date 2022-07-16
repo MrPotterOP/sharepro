@@ -2,6 +2,8 @@ import express from "express";
 import dotenv from "dotenv";
 import mongoose from "mongoose";
 import router from "./routes/routes.js";
+import cors from "cors";
+import fileUpload from "express-fileupload";
 
 dotenv.config();
 
@@ -14,8 +16,9 @@ mongoose.connect(process.env.MONGOURL, {useNewUrlParser: true, useUnifiedTopolog
 });
 
 const App = express();
-
+App.use(cors());
 App.use(express.json());
+App.use(fileUpload({useTempFiles: true}));
 App.use("/api/", router);
 
 

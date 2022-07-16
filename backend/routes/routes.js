@@ -4,9 +4,11 @@ const router = express.Router();
 
 
 // Components
-import online from "../components/online.js";
+import GetOnline from "../controllers/GetOnline.js.js";
+import PostUpload from "../controllers/PostUpload.js";
 
 
-router.get("/online", online);
+router.get("/online", GetOnline);
+router.post("/upload", PostUpload);
 
 export default router;
