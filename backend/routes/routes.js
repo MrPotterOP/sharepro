@@ -4,7 +4,7 @@ const router = express.Router();
 
 
 // Components
-import GetOnline from "../controllers/GetOnline.js.js";
+import GetOnline from "../controllers/GetOnline.js";
 import PostUpload from "../controllers/PostUpload.js";
 
 
