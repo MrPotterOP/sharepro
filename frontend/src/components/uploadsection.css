@@ -36,13 +36,14 @@
     display: block;
     font-size: var(--smaller-font-size);
 }
-.upload-inputs-container p {
+.upload-inputs-container p, .warning-message, .success-message {
     background-color: rgba(0, 0, 255, 0.023);
     font-size: var(--smaller-font-size);
     padding: .2rem 2rem;
     border-radius: 8px;
     display: inline-block;
 }
+
 .input-primary {
     margin: 1rem 0 .5rem 0;
     padding: .6rem;
@@ -56,6 +57,27 @@
     margin: 1rem auto;
     display: block;
 }
+/*                  Warnings */
+.warning-message {
+    background-color: transparent !important;
+    max-height: 0;
+    transition: 300ms;
+    overflow: hidden;
+}
+.show-warnings .warning-message {
+    max-height: max-content !important;
+    background-color: rgba(255, 0, 0, 0.221) !important;
+}
+.success-message {
+    max-height: 0;
+    overflow: hidden;
+    background-color: transparent !important;
+}
+.show-warnings .success-message{
+    max-height: max-content !important;
+    background-color: rgba(0, 233, 155, 0.178) !important;
+}
+
 
 @media (min-width: 43.7em){
     .upload-container{
