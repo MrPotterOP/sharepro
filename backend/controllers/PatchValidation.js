@@ -23,7 +23,7 @@ const validation = (req, res) =>{
                 if(!success){
                     return res.status(401).json({msg: "Wrong Password."});
                 }
-                return res.json({photoURL: doc.photoURL});
+                return res.json({photoURL: doc.photoURL, limit: doc.limit, downloaded: doc.downloaded , name: doc.name});
             });
         };
     });
