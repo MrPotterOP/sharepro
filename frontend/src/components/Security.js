@@ -7,7 +7,7 @@ import DownloadPhoto from "./DownloadPhoto";
 
 const Security = (props)=>{
     const {id} = props;
-    const apiUrl = "http://localhost:4000/api/validation";
+    const apiUrl = "https://sharepro-api.herokuapp.com/api/validation";
     const [wrongCount, setWrongCount] = useState(3);
     let password;
     const [data, setData] = useState();
