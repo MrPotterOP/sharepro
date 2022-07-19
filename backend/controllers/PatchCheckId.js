@@ -13,6 +13,8 @@ const checkId = (req, res)=>{
         }
         if(doc){
             return res.json({doc});
+        }else {
+            return res.status(404).json({msg: "Item Not Found"});
         }
     });
 };
