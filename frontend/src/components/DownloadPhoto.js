@@ -9,7 +9,7 @@ const DownloadPhoto = (props)=>{
     const {url, limit, downloaded, name, id, photoID} = props;
     const fileName = `sharepro-${Date.now()}.${url.split(".")[3]}`;
 
-    const apiUrl = "http://localhost:4000/api/download";
+    const apiUrl = "https://sharepro-api.herokuapp.com/api/download";
 
     const downloadRequest = ()=>{
         axios.put(apiUrl, {id, photoID})

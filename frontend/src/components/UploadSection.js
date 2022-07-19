@@ -11,7 +11,7 @@ const UploadSection = ()=>{
     const [fileName, setFileName] = useState("/images/step1.png");
     const [photo, setPhoto] = useState();
     const [alert, setAlert] = useState(false);
-    const apiUrl = "http://localhost:4000/api/upload";
+    const apiUrl = "https://sharepro-api.herokuapp.com/api/upload";
 
     const [responseData, setResponseData] = useState();
     const [status, setStatus] = useState("");
