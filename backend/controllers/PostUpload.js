@@ -26,7 +26,6 @@ const upload = (req, res) => {
                         return res.staus(500).json({msg: "Some error Occured"});
                         } 
                     if(result){
-                        console.log(result);
                 bcrypt.genSalt(4, (err, salt)=>{
                 if(err){
                     return res.staus(500).json({msg: "Some error Occured."});
