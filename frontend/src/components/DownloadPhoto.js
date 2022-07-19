@@ -14,7 +14,7 @@ const DownloadPhoto = (props)=>{
     const downloadRequest = ()=>{
         axios.put(apiUrl, {id, photoID})
         .then(r => r.data ? navigate("/") : null)
-        .catch(e => e.response ? console.log(e.response) : null);
+        .catch(e => e.response ? navigate("/") : null);
     }
 
     const handleDownload = ()=>{

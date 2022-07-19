@@ -1,8 +1,10 @@
 import React from "react";
 import "./hero.css";
+import { useNavigate } from "react-router-dom";
 
 
 const Hero =()=>{
+    const navigate = useNavigate();
     return(
         <section className="section-hero">
             <div className="hero-image-container">
@@ -17,7 +19,7 @@ const Hero =()=>{
                     use sharepro to share your images securely over the internet with password protectction.
                 </p>
                 <div className="hero-btn-conatiner">
-                    <button className="hero-btn">Platform</button>
+                    <button className="hero-btn" onClick={()=> navigate("/platform")}>Platform</button>
                 </div>
             </div>
         </section>
