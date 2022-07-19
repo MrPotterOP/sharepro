@@ -31,10 +31,10 @@ const Navbar = ()=>{
 
                 <div className="nav-menu-container" id={isActive ? "active" : "inactive"}>
                     <ul>
-                        <li><HashLink to="/">Home</HashLink></li>
-                        <li><HashLink to="/#how-it-works">How It Works</HashLink></li>
-                        <li><HashLink to="/#faqs">FAQs</HashLink></li>
-                        <li><HashLink to="/platform">Getting Started</HashLink></li>
+                        <li><HashLink to="/" onClick={()=> setIsActive(false)}>Home</HashLink></li>
+                        <li><HashLink to="/#how-it-works" onClick={()=> setIsActive(false)}>How It Works</HashLink></li>
+                        <li><HashLink to="/#faqs" onClick={()=> setIsActive(false)}>FAQs</HashLink></li>
+                        <li><HashLink to="/platform" onClick={()=> setIsActive(false)}>Getting Started</HashLink></li>
                     </ul>
                 </div>
 

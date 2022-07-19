@@ -37,7 +37,7 @@
 }
 
 .status-content-success {
-    padding: 4rem;
+    padding: 1rem;
     display: grid;
     grid-template-rows: .4fr 8fr;
     gap: 2rem;
@@ -82,6 +82,7 @@
 
 @media (min-width: 43.7em){
     .status-content-success {
+        padding: 4rem;
         grid-template-columns: .6fr .4fr;
         grid-template-rows: 1fr;
     }
