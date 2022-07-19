@@ -24,6 +24,9 @@ const itemSchema = new mongoose.Schema({
     password: {
         type: String,
         min: 5
+    },
+    photoID: {
+        type: String
     }
 });
 

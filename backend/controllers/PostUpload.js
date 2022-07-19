@@ -26,7 +26,7 @@ const upload = (req, res) => {
                         return res.staus(500).json({msg: "Some error Occured"});
                         } 
                     if(result){
-
+                        console.log(result);
                 bcrypt.genSalt(4, (err, salt)=>{
                 if(err){
                     return res.staus(500).json({msg: "Some error Occured."});
@@ -36,7 +36,7 @@ const upload = (req, res) => {
                         return res.staus(500).json({msg: "Some error occured"});
                     }
 
-                    Item.create({name, limit, password: hash, photoURL: result.secure_url}, (e, doc)=>{
+                    Item.create({name, limit, password: hash, photoURL: result.secure_url, photoID: result.public_id}, (e, doc)=>{
                         if(e){
                             res.status(401).json({msg: "some error occured"})
                         }if(doc){
