@@ -2,6 +2,8 @@ import React,{useState} from "react";
 import {useNavigate} from "react-router-dom";
 import "./status.css";
 
+import Error404 from "./Error404";
+
 const Status = (props)=>{
     const {status, id} = props;
     const [timer, setTimer] = useState(5);
@@ -63,6 +65,8 @@ const Status = (props)=>{
         return <Failure />
     }else if(status === "loading"){
         return <Loading />
+    }else if (status === "notFound"){
+        return <Error404 />
     }else {
         return <></>
     }
