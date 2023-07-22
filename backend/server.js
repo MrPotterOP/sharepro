@@ -19,7 +19,30 @@ const App = express();
 App.use(cors());
 App.use(express.json());
 App.use(fileUpload({useTempFiles: true}));
-App.use("/api/", router);
+
+const PORT = process.env.PORT || 8080
+
+mongoose.set('strictQuery', false);
+
+const connectDB = async () => {
+  try {
+    const conn = await mongoose.connect(process.env.MONGO_URI);
+    console.log(`MongoDB Connected: ${conn.connection.host}`);
+  } catch (error) {
+    console.log(error);
+    process.exit(1);
+  }
+}
+
+//Routes go here
+App.use("/api", router);
+
+//Connect to the database before listening
+connectDB().then(() => {
+    App.listen(PORT, () => {
+        console.log("listening for requests");
+    })
+})
 
 
 App.listen(process.env.PORT || 4000, (req, res)=>{

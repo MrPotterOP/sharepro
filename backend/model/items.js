@@ -4,7 +4,6 @@ const itemSchema = new mongoose.Schema({
     name: {
         type: String,
         max: 20,
-        min: 4,
         default: "anonymous"
     },
     limit: {

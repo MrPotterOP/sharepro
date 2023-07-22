@@ -36,7 +36,7 @@ const Status = (props)=>{
         )
     }
     const Success = ()=>{
-        const link = "http://localhost:3000/download?photo="+ id;
+        const link = "https://share-pro.netlify.app/download?photo="+ id;
         const handleCopy = ()=>{
             navigator.clipboard.writeText(link);
             setCopied(true);

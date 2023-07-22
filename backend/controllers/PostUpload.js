@@ -18,7 +18,7 @@ const upload = (req, res) => {
     const {name, limit, password} = req.body;
     const filePath = req.files.photo.tempFilePath;
 
-        if(name.length < 3 || limit >= 50 || limit === 0 || password.length < 6 || password.length > 30){
+        if(name.length < 3 || limit >= 50 || limit === 0 || password.length < 4 || password.length > 30){
             return res.status(401).json({msg: "Invalid data inputs."}); 
         }else {
                 cloudinary.v2.uploader.upload( filePath, (err, result)=>{
